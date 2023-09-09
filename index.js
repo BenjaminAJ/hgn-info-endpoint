@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+const moment = require('moment')
 
 const app = express()
 app.use(cors())
@@ -15,8 +16,7 @@ app.get('/api/',(req,res)=>{
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const current_day = daysOfWeek[new Date().getDay()];
 
-    const now = new Date();    
-    const utc_time = now.toISOString();
+    const utc_time = moment().utc().format();
     
 
     const jsonResponse = {
