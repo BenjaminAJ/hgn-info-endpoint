@@ -32,5 +32,5 @@ app.get('/api/',(req,res)=>{
 })
 
 app.listen(port, (req,res)=>{
-    console.log('Serveris listening on port ' + port);
+    console.log('Server is listening on port ' + port);
 })
